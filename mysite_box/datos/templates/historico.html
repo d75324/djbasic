@@ -1,0 +1,26 @@
+<h4>Historico</h4>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Telefono</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for beirut_for in beirut %}
+                <tr>
+                <td>{{ beirut_for.nombre }}</td>
+                <td>{{ beirut_for.apellido }}</td>
+                <td>{{ beirut_for.edad }}</td>
+                <td>{{ beirut_for.telefono }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div><br>
+    <div>
+    <a href = "{% url 'home' %}"> Back Home </a><br>    
+    </div>
