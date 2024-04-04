@@ -1,4 +1,4 @@
-<h4>Historico</h4>
+<h4>Registro ordenado por EDAD</h4>
 <div class="container">
     <table class="table">
         <thead>
@@ -10,12 +10,12 @@
           </tr>
         </thead>
         <tbody>
-            {% for beirut_for in beirut %}
+            {% for libano_for in libano %}
                 <tr>
-                <td>{{ beirut_for.nombre }}</td>
-                <td>{{ beirut_for.apellido }}</td>
-                <td>{{ beirut_for.edad }}</td>
-                <td>{{ beirut_for.telefono }}</td>
+                <td>{{ libano_for.nombre }}</td>
+                <td>{{ libano_for.apellido }}</td>
+                <td>{{ libano_for.edad }}</td>
+                <td>{{ libano_for.telefono }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -23,7 +23,4 @@
     </div><br>
     <div>
     <a href = "{% url 'home' %}"> Back Home </a><br>    
-    </div><br>
-    <div>
-      <a href = "{% url 'edad' %}"> Quiero verlos ordenados por EDAD </a><br>    
     </div>

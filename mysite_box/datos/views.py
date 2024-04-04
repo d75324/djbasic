@@ -30,3 +30,9 @@ def historico(request):
     beirut = DatosUsuario.objects.all().order_by('-fecha_creacion')
     context['beirut'] = beirut
     return render(request, 'historico.html', context)
+
+def otravista(request):
+    context = {}
+    libano = DatosUsuario.objects.all().order_by('-edad')
+    context['libano'] = libano
+    return render(request, 'edad.html', context)
