@@ -1,0 +1,34 @@
+<h3>---</h3>
+<h4>Todos los profesionales</h4>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Profesion</th>
+            <th>Año de Egreso</th>
+            <th>Experiencia Profesional</th>
+            <th>Experiencia Docente</th>
+            <th>Estado</th>      
+          </tr>
+        </thead>
+        <tbody>
+            {% for aman_for in aman %}
+                <tr>
+                    <td>{{ aman.usuario }}</td>
+                    <td>{{ aman.profesion }}</td>
+                    <td>{{ aman.anio_egreso }}</td>
+                    <td>{{ aman.experiencia }}</td>
+                    <td>{{ aman.experiencia_docente }}</td>
+                    <td>{{ aman.estado }}</td>                
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div><br>
+    <div>
+    <a href = "{% url 'home' %}"> Back Home </a><br>    
+    </div><br>
+    <div>
+      <a href = "{% url 'edad' %}"> Quiero verlos ordenados por EDAD </a><br>    
+    </div>

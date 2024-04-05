@@ -15,10 +15,20 @@ class DatosUsuario(models.Model):
         return (f'{self.nombre} {self.apellido}')
 
 class Profesionales(models.Model):
+    ESTADO = {
+        'Activo'
+        'Retirado'
+        'Activo en Suspenso'
+        'Suspendido'
+    }
+    #usuario = models.ForeignKey(DatosUsuario, on_delete=models.CASCADE)
+    usuario = models.CharField(max_length=250, default='default')
     profesion = models.CharField(max_length=250)
     anio_egreso = models.DateTimeField()
-    experiencia = models.IntegerField()
+    experiencia = models.IntegerField(default=1)
     experiencia_docente = models.IntegerField()
+    #un_campo_cualquiera = models.CharField(max_length=250, default='default')
+    estado = models.CharField(max_length=50, default='Activo')
 
     class Meta:
         verbose_name = 'Profesionales'

@@ -6,4 +6,6 @@ urlpatterns = [
     path('form/', views.formulariobasico, name='form'),
     path('historico/', views.historico, name='historico'),
     path('edad/', views.otravista, name='edad'),
+    path('profesionales/', views.formularioprofesionales, name='profesionales'),
+    path('todos/', views.todoslosprofesionalesvista, name='todos'),
 ]

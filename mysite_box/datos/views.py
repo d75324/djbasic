@@ -36,3 +36,23 @@ def otravista(request):
     libano = DatosUsuario.objects.all().order_by('-edad')
     context['libano'] = libano
     return render(request, 'edad.html', context)
+
+# crear un par de vistas sobre el modelo 'Profesionales'.
+# primero, voy a crear un formulario para cargar Profesionales
+
+def formularioprofesionales(request):
+    if request.method == 'POST':
+        elcairo = FormularioDatos(request.POST)
+        if elcairo.is_valid():
+            elcairo.save()
+            #messages.success(request, "Los datos del profesional se registraron correctamente")
+            return redirect('home')
+    else:
+        elcairo = FormularioDatos(request.POST)
+    return render(request, 'profesionales.html')
+
+def todoslosprofesionalesvista(request):
+    context = {}
+    aman = DatosUsuario.objects.all()
+    context['aman'] = aman
+    return render(request, 'todoslosprofesionales.html', context)

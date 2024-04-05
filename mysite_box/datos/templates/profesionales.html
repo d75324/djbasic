@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesionales</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Ingreso de Profesionales</h2>
+        <h4>Utilice este formulario para ingresar los datos de un nuevo PROFESIONAL</h4>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        </div><br>
+        <div>
+            <label for="profesion">Profesion:</label>
+            <input type="text" id="profesion" name="profesion" required>
+        </div><br>
+        <div>
+            <label for="anio_egreso">Año de Egreso:</label>
+            <input type="text" id="anio_egreso" name="anio_egreso" required>
+        </div><br>
+        <div>
+            <label for="experiencia">Experiencia:</label>
+            <input type="text" id="experiencia" name="experiencia" required>
+        </div><br>
+        <div>
+            <label for="experiencia_docente">Experiencia Docente:</label>
+            <input type="text" id="experiencia_docente" name="experiencia_docente" required>
+        </div><br>
+        <div>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+        </div><br>
+
+        <div>
+            <button type="submit">Enviar</button>
+        </div><br>
+        <a href = "#"> Ver todos los PROFESIONALES </a><br>
+    </form>
+    </div>
+</body>
+</html>
