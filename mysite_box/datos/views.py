@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import FormularioDatos
-from .models import DatosUsuario
+from .models import DatosUsuario, Profesionales
 from django.contrib import messages
 
 def home(request):
@@ -31,6 +31,7 @@ def historico(request):
     context['beirut'] = beirut
     return render(request, 'historico.html', context)
 
+# listar los profesionales por edad
 def otravista(request):
     context = {}
     libano = DatosUsuario.objects.all().order_by('-edad')
@@ -53,6 +54,6 @@ def formularioprofesionales(request):
 
 def todoslosprofesionalesvista(request):
     context = {}
-    aman = DatosUsuario.objects.all()
+    aman = Profesionales.objects.all().order_by('-anio_egreso')
     context['aman'] = aman
     return render(request, 'todoslosprofesionales.html', context)
