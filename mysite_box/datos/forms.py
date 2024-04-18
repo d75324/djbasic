@@ -21,3 +21,18 @@ class FormularioDeCargaDeProfesionales(forms.ModelForm):
                 'experiencia_docente',
                 'estado'
                     ]
+        
+        
+class Short(forms.ModelForm):
+    nombre_usuario = forms.ModelChoiceField(queryset=DatosUsuario.objects.all(), label="Nombre del Usuario")
+
+    class Meta:
+        model = Profesionales
+        fields = [
+                'nombre_usuario',
+                'profesion',
+                'anio_egreso',
+                'experiencia',
+                'experiencia_docente',
+                'estado'
+                    ]

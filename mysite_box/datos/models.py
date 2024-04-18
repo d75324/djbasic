@@ -23,12 +23,13 @@ class Profesionales(models.Model):
     }
     usuario = models.ForeignKey(DatosUsuario, on_delete=models.CASCADE)
     profesion = models.CharField(max_length=250)
-    anio_egreso = models.DateTimeField()
+    anio_egreso = models.IntegerField()
     experiencia = models.IntegerField(default=1)
     experiencia_docente = models.IntegerField()
     #un_campo_cualquiera = models.CharField(max_length=250, default='default')
     #estado = models.CharField(max_length=50, default='Activo')
     estado = models.CharField(max_length=100, choices=ESTADO, default='Activo')
+    variable = models.IntegerField(default=1)
 
     class Meta:
         verbose_name = 'Profesionales'

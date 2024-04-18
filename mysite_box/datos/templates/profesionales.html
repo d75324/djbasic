@@ -13,8 +13,9 @@
         {% csrf_token %}
         <div>
             <label for="usuario">Usuario:</label>
+            <p>*<i>El Profesional tiene que ser un Usuario ya Registrado</i></p>
+            <p>El nombre es: {{ one.nombre }}</p>
             <input type="text" id="usuario" name="usuario" required>
-            <p>El Profesional tiene que ser un Usuario ya Registrado</p>
         </div><br>
         <div>
             <label for="profesion">Profesion:</label>

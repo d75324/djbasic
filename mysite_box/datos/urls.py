@@ -8,4 +8,6 @@ urlpatterns = [
     path('edad/', views.otravista, name='edad'),
     path('profesionales/', views.formularioprofesionales, name='profesionales'),
     path('todos/', views.todoslosprofesionalesvista, name='todos'),
+    path('uno/', views.justone, name='uno'),
+    path('dos/', views.crear_profesional, name='dos'),
 ]
